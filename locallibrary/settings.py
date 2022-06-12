@@ -93,13 +93,6 @@ else:
         conn_max_age=500
     )
 
-#The following environment variable, called DATABASE_URL, has to be defined
-#at the o.s. level: export DATABASE_URL =
-# ’postgres://alumnodb:alumnodb@localhost:5432/psi’
-db_from_env = dj_database_url.config(
-        default='postgres://alumnodb:alumnodb@localhost:5432/psi', 
-        conn_max_age=500)
-DATABASES['default'] = db_from_env
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
